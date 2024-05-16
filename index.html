@@ -9,17 +9,17 @@
 <body>
     <h1> Dados do contribuinte</h1>
     <form id="form-dados" action="add_dados.php" method="POST">
-<input type="text" name="nome_cont" size="50"required> <br>
+Nome: <input type="text" name="nome_cont" size="50"required> <br>
 CPF: <input type="text" name="cpf" placeholder="Apenas números" required> <br>
 RG: <input type="text" name="rg" placeholder="Apenas números" required> <br>
 Orgão Emissor: <input type="text" name="orgao" required> <br>
 Profissão: <input type="text" name="profissao" required> <br>
 Título de Eleitor: <input type="text" name="titulo" required> <br>
-Estado Civil: <input type="radio" name="est_civ" value="1">
+Estado Civil: <input type="radio" name="est_civ" value= 1 >
 Solteiro
-<input type="radio" name="est_civ" value="2">
+<input type="radio" name="est_civ" value= 2 >
 Casado
-<input type="radio" name="est_civ" value="3">
+<input type="radio" name="est_civ" value= 3 >
 Viúvo(a) <br>
 Data de Nascimento: <input type="date" name="dt_nasc" required>
 Sexo:
@@ -28,7 +28,7 @@ Masculino
 <input type="radio" name="sexo" value="F">
 Feminino <br>
 Rua: <input type="text" name="rua_cont" size="50" required>
-N° <input type="text" name="num_cont" required> <br>
+N° <input type="number" name="num_cont" required> <br>
 Bairro <input type="text" name="bairro" required>
 Cidade <input type="text" name="cidade" required> <br>
 UF:
@@ -43,7 +43,7 @@ UF:
             <option value="ES">Espírito Santos</option>
             <option value="GO">Goiás</option>
             <option value="MA">Maranhão</option>
-            <option value="MT"> Mato Grosso</option>
+            <option value="MT">Mato Grosso</option>
             <option value="MS">Mato Grosso do Sul</option>
             <option value="MG">Minas Gerais</option>
             <option value="PA">Pará</option>
@@ -64,7 +64,7 @@ UF:
         CEP: <input type="number" name="cep_cont" required><br>
         Telefone Fixo: <input type="number" name="tel_cont">
         Celular / WhatsApp: <input type="number" name="cel_cont" required>
-        E-mail: <input type="email" name="email.cont" size="50"> <br>
+        E-mail: <input type="email" name="email_cont" size="50"> <br>
         Escolaridade:
         <select name="escolaridade">
             <option value="1">Sem escolaridade</option>
@@ -84,7 +84,7 @@ UF:
             Código de acesso: <input type="text" name="cod"><br>
             N° do recibo do IR (se for necessário): <input type="text" name="num_ir"><br>
             Rua: <input type="text" name="rua_emp" size="50" required>
-        N° <input type="text" name="num_emp" required> <br>
+        N° <input type="number" name="num_emp" required> <br>
         Bairro <input type="text" name="bairro_emp" required>
         Cidade <input type="text" name="cidade_emp" required> <br>
         UF:
@@ -118,23 +118,23 @@ UF:
             <option value="TO">Tocantins</option>
         </select>
         CEP: <input type="number" name="cep_emp" required><br>
-        Telefone: <input type="number_emp" name="cel_cont" required>
-        E-mail: <input type="email" name="email.cont" size="50"> <br>
+        Telefone: <input type="number_emp" name="tel_emp" required>
+        E-mail: <input type="email" name="email_cont" size="50"> <br>
         Gera faturamento:
-        <input type="radio" name="faturamento" value="1"> Sim
-        <input type="radio" name="faturamento" value="2"> Não <br>
+        <input type="radio" name="faturamento" value= 1 > Sim
+        <input type="radio" name="faturamento" value= 2 > Não <br>
         Quanto? (Valor médio mensal):
         <input type="number" name="fat_mensal" step="0.01" min="0.00"><br>
         Segmento de negócio:
         <select name="segmento">
-            <option value="1">Comércio</option>
-            <option value="2">Serviço</option>
-            <option value="3">Indústria</option>
+            <option value= 1>Comércio</option>
+            <option value= 2>Serviço</option>
+            <option value= 3>Indústria</option>
             </select><br>
             Data da Abertura: <input type="date" name="dt_abertura"><br>
             Tem funcionário:
-            <input type="radio" name="funcionario" value="1"> Sim
-            <input type="radio" name="funcionario" value="0"> Não <br>
+            <input type="radio" name="funcionario" value= 1 > Sim
+            <input type="radio" name="funcionario" value= 0 > Não <br>
             Demanda da Empresa: <br>
             <textarea name="demanda" rows="4" cols="50"></textarea><br>
             <input type="submit" name="cadastrar" value="Cadastrar">
