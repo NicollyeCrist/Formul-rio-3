@@ -41,7 +41,7 @@ $bairro_emp = isset($_POST['bairro_emp']) ? $_POST['bairro_emp'] : '';
 $cidade_emp = isset($_POST['cidade_emp']) ? $_POST['cidade_emp'] : '';
 $uf_emp = isset($_POST['uf_emp']) ? $_POST['uf_emp'] : '';
 $cep_emp = isset($_POST['cep_emp']) ? $_POST['cep_emp'] : '';
-$cel_cont = isset($_POST['cel_cont']) ? $_POST['cel_cont'] : '';
+$tel_emp = isset($_POST['tel_emp']) ? $_POST['tel_emp'] : '';
 
 $email_cont = isset($_POST['email_cont']) ? $_POST['email_cont'] : '';
 $faturamento = isset($_POST['faturamento']) ? $_POST['faturamento'] : '';
@@ -53,10 +53,19 @@ $funcionario = isset($_POST['funcionario']) ? $_POST['funcionario'] : '';
 $demanda = isset($_POST['demanda']) ? $_POST['demanda'] : '';
 
 
-$insert = "INSERT INTO" usabilidade (nome, cpf, rg, orgao, profissao, titulo, estado_civil, nascimento, sexo, rua_cont, num_cont, 
+$insert = "INSERT INTO usabilidade (nome, cpf, rg, orgao, profissao, titulo, estado_civil, nascimento, sexo, rua_cont, num_cont, 
 bairro_cont, cidade_cont, uf_cont, cep, telefone_cont, celular, email, escolaridade, rendimento, membros, 
 fantasia, razao, cnpj, cod_acesso, recibo, rua_emp, num_emp, bairro_emp, cidade_emp, uf_empresa,
 cep_empresa, tel_emp, email_emp, gera, valor, segmento, data_abertura, funcionarios, demanda)
-VALUES ()
+    VALUES ('$nome', '$cpf', '$rg', '$orgao', '$profissao', '$titulo', $est_civ, '$dt_nasc', '$sexo', '$rua_cont', $num_cont, '$bairro',
+    '$cidade', '$uf_cont', $cep_cont, '$tel_cont', '$cel_cont', '$email_cont', $escolaridade, $rend_fam, $membros,
+    '$fantasia', '$razao', '$cnpj', '$cod', '$num_ir', '$rua_emp', '$num_emp', '$bairro_emp', '$cidade_emp', '$uf_emp', $cep_emp, '$tel_emp',
+    '$email_cont', $faturamento, '$fat_mensal', $segmento, '$dt_abertura', $funcionario, '$demanda')";
 $query = mysqli_query($conexao, $insert);
+if ($query == True) {
+    echo '<script>alert("Cadastrado com sucesso");
+    window.location="index.html";
+    </script>';
+}
+
 ?>
